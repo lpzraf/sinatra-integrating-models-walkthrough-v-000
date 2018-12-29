@@ -1,4 +1,5 @@
-# Your TextAnalyzer model code will go here.
+
+require "pry"
 class TextAnalyzer
   attr_reader :text
  
@@ -38,11 +39,11 @@ class TextAnalyzer
       end
     end
  
-    biggest
+    biggest.keys.first.upcase
   end
   
   def num_times
-    self.text.count(self.most_used_letter)
+    self.text.count(self.most_used_letter.downcase)
   end
 end
   
